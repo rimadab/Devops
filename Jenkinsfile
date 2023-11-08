@@ -18,7 +18,7 @@ stages {
                 sh 'mvn compile'
                 }
 }
-
+/*
 stage('SONARQUBE'){
  steps {
  sh"mvn clean verify sonar:sonar \
@@ -28,7 +28,7 @@ stage('SONARQUBE'){
   -Dsonar.token=sqp_1143f466c9ad749828d1528815a88cfb48596b80"
  }
  }
- 
+ */
  
  stage('MVN build'){
            steps{
@@ -38,7 +38,7 @@ stage('SONARQUBE'){
 
 
  
-
+/*
  
     stage('Publish to Nexus') {
 steps {
@@ -47,7 +47,7 @@ script {
           }
 }
  
-}
+}*/
 
  
  stage('Build Docker Image') {
@@ -65,12 +65,12 @@ script {
       sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
       }
    }
-
+/*
     stage('Push Docker Image') {
       steps {
         sh 'docker push rimadab/spring-app'
       }
-    }
+    }  */
 
  stage('DOCKER-COMPOSE'){
          
