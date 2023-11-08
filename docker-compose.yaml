@@ -13,11 +13,11 @@ services:
     command: mysqld --sql_mode=""
 
   spring-app:
-    image: ilyeshamdi/spring-app:latest
+    image: rimadab/spring-app:latest
     depends_on:
       - mysql
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/devops
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/kaddem
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
     ports:
